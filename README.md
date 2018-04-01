@@ -1,5 +1,5 @@
 # svdemo
-Demo for SV: shows polymer element, calling an API, within an ASP.NET project.
+Demo for SV: shows polymer 2 element, calling a public API, within an ASP.NET MVC5 project.
 
 Start in Chrome. Goto: http://localhost:XX/SV/Welcome
 API called: http://weerlive.nl/api/json-10min.php?locatie=Amsterdam
