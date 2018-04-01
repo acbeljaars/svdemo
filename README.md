@@ -1,2 +1,2 @@
 # svdemo
-Demo for SV
+Demo for SV: shows polymer element, calling an API, within an ASP.NET project.
