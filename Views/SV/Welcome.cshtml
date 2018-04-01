@@ -1,0 +1,21 @@
+﻿<link rel="import" href="~/bower_components/polymer/polymer.html">
+<link rel="import" href="~/Scripts/CustomPolymer/demo-temperature.html" />
+
+<script src="~/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2>Welcome</h2>
+
+<ul>
+    @for (int i = 0; i < ViewBag.NumTimes; i++)
+    {
+        <li>@ViewBag.Message</li>
+    }
+</ul>
+
+<div class="row">
+    <demo-temperature></demo-temperature>
+</div> 
