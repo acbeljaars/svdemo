@@ -1,0 +1,41 @@
+﻿<dom-module id="demo-map">
+    <style></style>
+    <template>
+        <h1>Hallo wereld</h1>
+
+        <div>kleine demo over het gebruik van polymer webcomponents in een MVC applicatie.</div>
+
+        <iron-input>
+            <input placeholder="plaatsnaam" value="{{city::input}}">
+        </iron-input>
+
+        <paper-button raisedButton class="colored" on-tap="search" id="btnSearch">Zoeken</paper-button>
+
+    </template>
+    <script>
+        class DemoTemperature extends Polymer.Element {
+            static get is() { return 'demo-map'; }
+            static get properties() {
+                return {
+                    city: {
+                        type: String,
+                        value: "Amsterdam"
+                    }
+                };
+            }
+
+            constructor() {
+                super();
+            }
+            search(e) {
+                //window.alert('hoi');
+                //var url = '@Url.Action("Index", "SV")';
+                var uri = encodeURI('/SV/Index?city=' + this.city);
+                window.location.href = uri;
+
+            }
+        }
+
+        window.customElements.define(DemoTemperature.is, DemoTemperature);
+    </script>
+</dom-module>
